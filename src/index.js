@@ -7,10 +7,11 @@ module.exports = function makeExchange(currency) {
   let floor;
 
   let keys = Object.keys(americanCoins);
+  let keysLength = keys.length;
 
   if(currency > 0 && currency < 10000){
 
-      for(let i = 0; i < keys.length, currency !== 0; i++){
+      for(let i = 0; i < keysLength, currency !== 0; i++){
         
           floor = Math.floor(currency / americanCoins[keys[i]]);
           if(floor === 0) continue;
